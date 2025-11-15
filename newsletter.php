@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<div class='text-danger'>Error subscribing. Please try again.</div>";
     }
+
 } else {
     echo "<div class='text-danger'>Invalid request.</div>";
 }

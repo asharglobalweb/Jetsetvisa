@@ -59,7 +59,8 @@
                                             class="far fa-map-marker-alt"></i>Hor Al Anz - Building 101, Dubai, UAE</a>
                                 </li>
                                 <li><a href="tel:+971562229196"><i class="far fa-phone"></i>+971 54 567 2633</a></li>
-                                <li><a href="mailto:info@jetsetvisas.ae"><i class="far fa-envelope"></i>info@jetsetvisas.ae</a>
+                                <li><a href="mailto:info@jetsetvisas.ae"><i
+                                            class="far fa-envelope"></i>info@jetsetvisas.ae</a>
                                 </li>
                             </ul>
                         </div>
@@ -141,7 +142,7 @@
                                     <li><a class="dropdown-item" href="new-zealand.html">New Zealand</a></li>
                                 </ul>
                             </li> -->
-                           <li class="nav-item dropdown">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
                                 <ul class="dropdown-menu fade-up">
                                     <li><a class="dropdown-item" href="about.html">About Us</a></li>
@@ -377,7 +378,7 @@
                                 you places!
                             </p>
                             <div class="footer-contact">
-                               <ul>
+                                <ul>
                                     <li><i class="far fa-map-marker-alt"></i>Hor Al Anz - Building 101, Dubai, UAE</li>
                                     <li><a href="https://wa.me/971545672633"><i class="far fa-phone"></i>+971 54 567
                                             2633
@@ -429,14 +430,10 @@
                                 <p>Get visa updates and travel tips. Subscribe to Jetset newsletter for exclusive offers
                                     and news.</p>
                                 <div class="subscribe-form">
-                                    <form
-                      action="newsletter.php"
-                      method="POST"
-                      id="newsletter-form"
-                    >
+                                    <form action="newsletter.php" method="POST" id="newsletter-form">
                                         <input type="hidden" name="_subject"
                                             value="📧 Newsletter Subscription - Visa Agency">
-                                            <input type="hidden" name="g-recaptcha-response">
+                                        <input type="hidden" name="g-recaptcha-response">
                                         <!-- <input type="hidden" name="subscription_source" value="Footer Newsletter"> -->
                                         <input type="email" name="email" class="form-control" placeholder="Your Email"
                                             required>
@@ -519,49 +516,49 @@
     </script>
 
     <script src="https://www.google.com/recaptcha/api.js?render=jbvsdbhsdvjhvjadvhabdvja-jhdbadshb"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-    // select all forms
-    document.querySelectorAll("form").forEach(form => {
+            // select all forms
+            document.querySelectorAll("form").forEach(form => {
 
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
 
-            const messageContainer =
-                form.querySelector(".form-message") ||
-                form.querySelector(".form-messege");
+                    const messageContainer =
+                        form.querySelector(".form-message") ||
+                        form.querySelector(".form-messege");
 
-            grecaptcha.ready(function() {
-                grecaptcha.execute("jbvsdbhsdvjhvjadvhabdvja-jhdbadshb", { action: "submit" }).then(function(token) {
-                    const formData = new FormData(form);
-                    formData.append("g-recaptcha-response", token);
+                    grecaptcha.ready(function () {
+                        grecaptcha.execute("jbvsdbhsdvjhvjadvhabdvja-jhdbadshb", { action: "submit" }).then(function (token) {
+                            const formData = new FormData(form);
+                            formData.append("g-recaptcha-response", token);
 
-                    fetch(form.action, {
-                        method: "POST",
-                        body: formData
-                    })
-                    .then(response => response.text())
-                    .then(data => {
-                        if (messageContainer) messageContainer.innerHTML = data;
-                        form.reset();
-                    })
-                    .catch(error => {
-                        if (messageContainer) {
-                            messageContainer.innerHTML = "<div class='text-danger'>Error submitting form.</div>";
-                        }
-                        console.error(error);
+                            fetch(form.action, {
+                                method: "POST",
+                                body: formData
+                            })
+                                .then(response => response.text())
+                                .then(data => {
+                                    if (messageContainer) messageContainer.innerHTML = data;
+                                    form.reset();
+                                })
+                                .catch(error => {
+                                    if (messageContainer) {
+                                        messageContainer.innerHTML = "<div class='text-danger'>Error submitting form.</div>";
+                                    }
+                                    console.error(error);
+                                });
+
+                        });
                     });
 
                 });
+
             });
 
         });
-
-    });
-
-});
-</script>
+    </script>
 
 </body>
 
