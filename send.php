@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     /* ------------------------------------------
        VERIFY reCAPTCHA v3
     ------------------------------------------- */
-    $secretKey = "jbvsdbhsdvjhvjadvhabdvja-jhdbadshb";
+    $secretKey = "secret_key";
     $recaptcha = $_POST['g-recaptcha-response'];
 
     $response = file_get_contents(

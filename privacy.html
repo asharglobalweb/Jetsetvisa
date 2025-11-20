@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://www.google.com/recaptcha/api.js?render=jbvsdbhsdvjhvjadvhabdvja-jhdbadshb"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=site_key"></script>
 
 
 
@@ -413,12 +413,12 @@
                         <div class="footer-widget-box list">
                             <h4 class="footer-widget-title">Visa Types</h4>
                             <ul class="footer-list">
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Schengen Tourist Visa</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Schengen Business Visa</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> UAE Tourist Visa</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> UAE Business Visa</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Student & Study Visas</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> UAE Residence Visa</a></li>
+                                <li><a href="schengent-visa.html"><i class="fas fa-caret-right"></i> Schengen Tourist Visa</a></li>
+                                <li><a href="schengenb-visa.html"><i class="fas fa-caret-right"></i> Schengen Business Visa</a></li>
+                                <li><a href="uaetourist-visa.html"><i class="fas fa-caret-right"></i> UAE Tourist Visa</a></li>
+                                <li><a href="uaebusiness-visa.html"><i class="fas fa-caret-right"></i> UAE Business Visa</a></li>
+                                <li><a href="study-visa.html"><i class="fas fa-caret-right"></i> Student & Study Visas</a></li>
+                                <li><a href="uaeres-visa.html"><i class="fas fa-caret-right"></i> UAE Residence Visa</a></li>
                                 <!-- <li><a href="#"><i class="fas fa-caret-right"></i> Migrate Visa</a></li> -->
                             </ul>
                         </div>
@@ -515,7 +515,7 @@
         });
     </script>
 
-    <script src="https://www.google.com/recaptcha/api.js?render=jbvsdbhsdvjhvjadvhabdvja-jhdbadshb"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=site_key"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
@@ -530,7 +530,7 @@
                         form.querySelector(".form-messege");
 
                     grecaptcha.ready(function () {
-                        grecaptcha.execute("jbvsdbhsdvjhvjadvhabdvja-jhdbadshb", { action: "submit" }).then(function (token) {
+                        grecaptcha.execute("site_key", { action: "submit" }).then(function (token) {
                             const formData = new FormData(form);
                             formData.append("g-recaptcha-response", token);
 
